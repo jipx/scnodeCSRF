@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Register</title>
+
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sign-in/">
+  <link href="css/login.css" rel="stylesheet" type="text/css">
+  <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+</head>
+
+
+<body class="text-center">
+  <form id="form-register" form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+    <label for="inputEmail" class="sr-only">Username</label>
+    <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+    <p></p>
+    <label for="inputpic" class="sr-only">Email</label>
+    <input type="text" id="email" class="form-control" placeholder="Email" required autofocus>
+    <p></p>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="password" class="form-control" placeholder="Password" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="register">Register</button>
+  </form>
+
+
+  <script>
+
+
+    $(document).ready(function () {
+
+      console.log("AA");
+      const baseUrl = "http://localhost:8081";
+      $("#form-register").submit((event) => {
+        event.preventDefault()
+        const username = $("#username").val();
+        const email = $("#email").val();
+        const password = $("#password").val();
+
+        console.log(`${baseUrl}/user/`);
+        axios.post(`${baseUrl}/user/`, {
+          username: username,
+          email: email,
+          password: password
+        })
+          .then((response) => {
+		  
+			if(response.status==500){
+				console.log("error!");
+			}else{
+				console.log('Successfully Registered!')
+				window.location.href = "http://localhost:8081/viewUsers.html";
+			}
+          })
+          .catch((error) => {
+            console.log("Error")
+          })
+      })
+    })
+
+
+  </script>
+
+
+</body>
+
+
+</html>

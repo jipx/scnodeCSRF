@@ -1,0 +1,10 @@
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Tue, 25 Jan 2022 03:06:48 GMT"}
+{"exception":"-","method":"POST","url":"/csrfModifyData","ip":"::1","date":"Tue, 25 Jan 2022 03:07:15 GMT"}
+{"exception":"-","method":"POST","url":"/csrfModifyData","ip":"::1","date":"Tue, 25 Jan 2022 03:07:46 GMT"}
+{"exception":"-","method":"POST","url":"/csrfModifyData","ip":"::1","date":"Tue, 25 Jan 2022 03:08:05 GMT"}
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Tue, 25 Jan 2022 03:56:51 GMT"}
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Tue, 25 Jan 2022 03:57:20 GMT"}
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Tue, 25 Jan 2022 06:34:11 GMT"}
+{"exception":"-","method":"POST","url":"/csrfModifyData","ip":"::1","date":"Tue, 25 Jan 2022 06:34:51 GMT"}
+{"exception":"-","method":"POST","url":"/csrfModifyData","ip":"::1","date":"Tue, 25 Jan 2022 06:35:47 GMT"}
+{"exception":"-","method":"POST","url":"/csrfModifyData","ip":"::1","date":"Tue, 25 Jan 2022 06:36:06 GMT"}

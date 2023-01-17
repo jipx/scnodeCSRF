@@ -1,0 +1,8 @@
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Sun, 23 Jan 2022 09:47:20 GMT"}
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Sun, 23 Jan 2022 09:49:24 GMT"}
+{"exception":"-","method":"POST","url":"/csrfModifyData","ip":"::1","date":"Sun, 23 Jan 2022 09:50:59 GMT"}
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Sun, 23 Jan 2022 15:28:45 GMT"}
+{"exception":"-","method":"POST","url":"/csrfModifyData","ip":"::1","date":"Sun, 23 Jan 2022 15:28:59 GMT"}
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Sun, 23 Jan 2022 15:56:16 GMT"}
+{"exception":"-","method":"GET","url":"/favicon.ico","ip":"::1","date":"Sun, 23 Jan 2022 15:56:17 GMT"}
+{"exception":"-","method":"GET","url":"/csrftestGet","ip":"::1","date":"Sun, 23 Jan 2022 15:56:52 GMT"}
