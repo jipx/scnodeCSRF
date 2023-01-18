@@ -44,6 +44,7 @@ app.use(morgan(`{"exception":":exception","method":":method","url":":url","ip":"
 
 //----session-----------
 var session = require('express-session');
+//use MySQLStore as session store, any better choice?
 var MySQLStore = require('express-mysql-session')(session);
 
 var dbconnect=require('../model/databaseConfig');
