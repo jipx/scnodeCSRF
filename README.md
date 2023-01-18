@@ -1,3 +1,5 @@
+# What is CSRF
+XSRF (Cross-Site Request Forgery) is a type of security vulnerability that allows an attacker to trick a user into performing unwanted actions on a website where they are currently authenticated. This is achieved by sending a malicious link or form to the user, which when clicked or submitted, sends a request to the website using the user's existing session. This can allow an attacker to perform actions such as changing the user's password or making unauthorized transactions. To prevent XSRF attacks, websites can use a technique called "synchronizer token pattern" which includes a unique token with each request that the server checks before processing the request.
 # scnodeCSRF
 
 Sample code to demo CSRF
