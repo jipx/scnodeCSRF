@@ -8,11 +8,11 @@ Here is an example of how to implement CSRF protection in a Node.js Express appl
 Install the csurf package: npm install csurf
 
 In your Express app, add the csurf middleware to your middleware stack:
-
-Copy code
+```
 const csrf = require('csurf');
 const csrfProtection = csrf({ cookie: true });
 app.use(csrfProtection);
+```
 In your views, add the csrf token to your forms as a hidden input field:
 ```
 <form>
