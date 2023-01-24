@@ -1,3 +1,5 @@
+# What is CSRF
+XSRF (Cross-Site Request Forgery) is a type of security vulnerability that allows an attacker to trick a user into performing unwanted actions on a website where they are currently authenticated. This is achieved by sending a malicious link or form to the user, which when clicked or submitted, sends a request to the website using the user's existing session. This can allow an attacker to perform actions such as changing the user's password or making unauthorized transactions. To prevent XSRF attacks, websites can use a technique called "synchronizer token pattern" which includes a unique token with each request that the server checks before processing the request.
 # scnodeCSRF
 
 Sample code to demo CSRF
@@ -6,11 +8,11 @@ Here is an example of how to implement CSRF protection in a Node.js Express appl
 Install the csurf package: npm install csurf
 
 In your Express app, add the csurf middleware to your middleware stack:
-
-Copy code
+```
 const csrf = require('csurf');
 const csrfProtection = csrf({ cookie: true });
 app.use(csrfProtection);
+```
 In your views, add the csrf token to your forms as a hidden input field:
 ```
 <form>
