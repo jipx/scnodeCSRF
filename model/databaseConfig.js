@@ -1,15 +1,15 @@
-var mysql = require('mysql');
+var mysql = require("mysql");
 
 var dbconnect = {
-getConnection: function() {
+  getConnection: function () {
     var conn = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "12345",
-    database: "furniture"
-});
-return conn;
-}
+      host: "localhost",
+      user: "root",
+      password: "password01",
+      database: "furniture",
+    });
+    return conn;
+  },
 };
 
-module.exports = dbconnect
+module.exports = dbconnect;
