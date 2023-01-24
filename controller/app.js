@@ -84,6 +84,8 @@ app.get("/csrftestGet", csrfProtection, function (req, res) {
   res.status(200).send(`{"csrfToken":"${req.csrfToken()}"}`);
 });
 app.post("/csrfModifyData", csrfProtection, function (req, res) {
+
+    /*CSRF token needs to be sent in the body with id:_csrf */
   /* 
 	activities to modify content in the server
 	
