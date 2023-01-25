@@ -67,7 +67,7 @@ app.use(
     secret: "an231hjEZ10mzk$zAP",
     store: sessionStore,
     saveUninitialized: true, //'Forces a session that is "uninitialized" to be saved to the store. A session is uninitialized when it is new but not modified.'
-    resave: true, //Forces the session to be saved back to the session store, even if the session was never modified during the request
+    resave: false, //Forces the session to be saved back to the session store, even if the session was never modified during the request
   })
 );
 
