@@ -65,9 +65,13 @@ App variables
 app.use(
   session({
     secret: "an231hjEZ10mzk$zAP",
+    // secret: process.env.SESSION_SECRET,
     store: sessionStore,
     saveUninitialized: true, //'Forces a session that is "uninitialized" to be saved to the store. A session is uninitialized when it is new but not modified.'
     resave: false, //Forces the session to be saved back to the session store, even if the session was never modified during the request
+    //Ensures the cookie is sent only over HTTP(S)
+    httpOnly: true,
+    secure: false, // Ensures the browser only sends the cookie over HTTPS. false for localhost.
   })
 );
 
@@ -84,8 +88,7 @@ app.get("/csrftestGet", csrfProtection, function (req, res) {
   res.status(200).send(`{"csrfToken":"${req.csrfToken()}"}`);
 });
 app.post("/csrfModifyData", csrfProtection, function (req, res) {
-
-    /*CSRF token needs to be sent in the body with id:_csrf */
+  /*CSRF token needs to be sent in the body with id:_csrf */
   /* 
 	activities to modify content in the server
 	
