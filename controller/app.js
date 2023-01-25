@@ -186,6 +186,7 @@ app.post("/user/login", function (req, res) {
       var role = result[0];
       var username = result[1];
       var session = req.session;
+      //store the session info at the server side
       session.role = role;
       console.log("Retrieved session.role:...", role);
       session.username = username;
